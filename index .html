@@ -62,7 +62,7 @@
 
         async function initializeLIFF() {
             try {
-                await liff.init({ liffId: '2008137360-wQprE6da' }); // 替換為新的LIFF ID
+                await liff.init({ liffId: '2008692913-wQprE6da' }); // 替換為新的LIFF ID
                 if (!liff.isLoggedIn()) {
                     liff.login();
                 } else {
@@ -78,7 +78,7 @@
 
         async function getDailyCode() {
             try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbzP0JqlF_V8t0hpuO7mpkUdz_65tSPdncKaBn4mTvdNaGVMlrO1vw3eK8Jv-BTB56o/exec'); // 替換為新的 Google Apps Script Web 應用程式 URL
+                const response = await fetch('https://script.google.com/macros/s/AKfycbwoSUWd0uT-I-nRiGpe6n5E7v0qNbGyD3WV-KCtyjZ9B-8t8x517lVl6Paa8U6Xb6Up/exec'); // 替換為新的 Google Apps Script Web 應用程式 URL
                 const data = await response.json();
                 return data.code;
             } catch (error) {
@@ -110,7 +110,7 @@
                 }
 
                 // Google 表單預填連結
-                const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScN-0vYtbhtJN8ruuxltNE4hHAxgQntKoWNY75YvykfNkze1Q/formResponse'; // 替換為新的打卡問卷ID
+                const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeH1Tb2_fQLeSjvJfUpwrbvaILgB0dqQlNnksdcL8yfzjIzAA/formResponse'; // 替換為新的打卡問卷ID
                 const prefilledUrl = `${formUrl}?=usp=pp_url&entry.1366094180=${encodeURIComponent(shift)}&entry.538125100=${encodeURIComponent(userId)}&entry.1841717274=${encodeURIComponent(qrContent)}`;
 
                 // 自動提交表單（使用 iframe 隱藏提交過程）
